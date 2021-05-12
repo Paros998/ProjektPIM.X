@@ -1,0 +1,100 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"4 Przyspieszenie.c
+[; ;Przyspieszenie.c: 4: static double policz_predkosc_katowa(double t)
+[v _policz_predkosc_katowa `(d ~T0 @X0 1 sf1`d ]
+"5
+[; ;Przyspieszenie.c: 5: {
+{
+[e :U _policz_predkosc_katowa ]
+"4
+[; ;Przyspieszenie.c: 4: static double policz_predkosc_katowa(double t)
+[v _t `d ~T0 @X0 1 r1 ]
+"5
+[; ;Przyspieszenie.c: 5: {
+[f ]
+"6
+[; ;Przyspieszenie.c: 6:     return 2 * 3.14159 / t;
+[e ) / * -> -> 2 `i `d .3.14159 _t ]
+[e $UE 1  ]
+"7
+[; ;Przyspieszenie.c: 7: }
+[e :UE 1 ]
+}
+"9
+[; ;Przyspieszenie.c: 9: double policz_szybkosc(double R, double t)
+[v _policz_szybkosc `(d ~T0 @X0 1 ef2`d`d ]
+"10
+[; ;Przyspieszenie.c: 10: {
+{
+[e :U _policz_szybkosc ]
+"9
+[; ;Przyspieszenie.c: 9: double policz_szybkosc(double R, double t)
+[v _R `d ~T0 @X0 1 r1 ]
+[v _t `d ~T0 @X0 1 r2 ]
+"10
+[; ;Przyspieszenie.c: 10: {
+[f ]
+"11
+[; ;Przyspieszenie.c: 11:     double w = policz_predkosc_katowa(t);
+[v _w `d ~T0 @X0 1 a ]
+[e = _w ( _policz_predkosc_katowa (1 _t ]
+"13
+[; ;Przyspieszenie.c: 13:     return w * R;
+[e ) * _w _R ]
+[e $UE 2  ]
+"14
+[; ;Przyspieszenie.c: 14: }
+[e :UE 2 ]
+}
+"16
+[; ;Przyspieszenie.c: 16: double policz_przyspieszenie_katowe(double R, double t)
+[v _policz_przyspieszenie_katowe `(d ~T0 @X0 1 ef2`d`d ]
+"17
+[; ;Przyspieszenie.c: 17: {
+{
+[e :U _policz_przyspieszenie_katowe ]
+"16
+[; ;Przyspieszenie.c: 16: double policz_przyspieszenie_katowe(double R, double t)
+[v _R `d ~T0 @X0 1 r1 ]
+[v _t `d ~T0 @X0 1 r2 ]
+"17
+[; ;Przyspieszenie.c: 17: {
+[f ]
+"18
+[; ;Przyspieszenie.c: 18:     double w = policz_predkosc_katowa(t);
+[v _w `d ~T0 @X0 1 a ]
+[e = _w ( _policz_predkosc_katowa (1 _t ]
+"20
+[; ;Przyspieszenie.c: 20:     return w / t;
+[e ) / _w _t ]
+[e $UE 3  ]
+"21
+[; ;Przyspieszenie.c: 21: }
+[e :UE 3 ]
+}
+"23
+[; ;Przyspieszenie.c: 23: double policz_przyspieszenie_styczne(double R, double t)
+[v _policz_przyspieszenie_styczne `(d ~T0 @X0 1 ef2`d`d ]
+"24
+[; ;Przyspieszenie.c: 24: {
+{
+[e :U _policz_przyspieszenie_styczne ]
+"23
+[; ;Przyspieszenie.c: 23: double policz_przyspieszenie_styczne(double R, double t)
+[v _R `d ~T0 @X0 1 r1 ]
+[v _t `d ~T0 @X0 1 r2 ]
+"24
+[; ;Przyspieszenie.c: 24: {
+[f ]
+"25
+[; ;Przyspieszenie.c: 25:     double E = policz_przyspieszenie_katowe(R, t);
+[v _E `d ~T0 @X0 1 a ]
+[e = _E ( _policz_przyspieszenie_katowe (2 , _R _t ]
+"27
+[; ;Przyspieszenie.c: 27:     return E * R;
+[e ) * _E _R ]
+[e $UE 4  ]
+"28
+[; ;Przyspieszenie.c: 28: }
+[e :UE 4 ]
+}
