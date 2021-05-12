@@ -5,7 +5,6 @@
  * Created on 20 kwietnia 2021, 18:04
  */
 #include "Przyspieszenie.h"
-#include <stdio.h>
 #include <xc.h>
 #define maskaTR 0b00000100;
 #define captureMode 0b00000101;
