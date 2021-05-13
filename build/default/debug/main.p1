@@ -4,27 +4,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2105 E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h
 [; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2105: extern volatile __bit CCP1IF __attribute__((address(0x62)));
 [v _CCP1IF `Vb ~T0 @X0 0 e@98 ]
+"2102
+[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2102: extern volatile __bit CCP1IE __attribute__((address(0x462)));
+[v _CCP1IE `Vb ~T0 @X0 0 e@1122 ]
+"856
+[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 856: extern volatile unsigned short CCPR1 __attribute__((address(0x015)));
+[v _CCPR1 `Vus ~T0 @X0 0 e@21 ]
+"18 ./Przyspieszenie.h
+[; ;./Przyspieszenie.h: 18: extern double policz_przyspieszenie(double t);
+[v _policz_przyspieszenie `(d ~T0 @X0 0 ef1`d ]
+"21
+[; ;./Przyspieszenie.h: 21: extern void konwersja_na_bity(double wart, char wynik[]);
+[v _konwersja_na_bity `(v ~T0 @X0 0 ef2`d`*uc ]
+"2489 E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h
+[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2489: extern volatile __bit TMR1IF __attribute__((address(0x60)));
+[v _TMR1IF `Vb ~T0 @X0 0 e@96 ]
+"2486
+[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2486: extern volatile __bit TMR1IE __attribute__((address(0x460)));
+[v _TMR1IE `Vb ~T0 @X0 0 e@1120 ]
+"614
+[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 614: extern volatile unsigned short TMR1 __attribute__((address(0x00E)));
+[v _TMR1 `Vus ~T0 @X0 0 e@14 ]
 [p mainexit ]
 "1416
 [; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 1416: extern volatile unsigned char TRISC __attribute__((address(0x087)));
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"877
+[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 877: extern volatile unsigned char CCP1CON __attribute__((address(0x017)));
+[v _CCP1CON `Vuc ~T0 @X0 0 e@23 ]
+"2186
+[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2186: extern volatile __bit GIE __attribute__((address(0x5F)));
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"2243
+[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2243: extern volatile __bit PEIE __attribute__((address(0x5E)));
+[v _PEIE `Vb ~T0 @X0 0 e@94 ]
 "2483
 [; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2483: extern volatile __bit TMR1CS __attribute__((address(0x81)));
 [v _TMR1CS `Vb ~T0 @X0 0 e@129 ]
 "2492
 [; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2492: extern volatile __bit TMR1ON __attribute__((address(0x80)));
 [v _TMR1ON `Vb ~T0 @X0 0 e@128 ]
-"877
-[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 877: extern volatile unsigned char CCP1CON __attribute__((address(0x017)));
-[v _CCP1CON `Vuc ~T0 @X0 0 e@23 ]
-"2321
-[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2321: extern volatile __bit RC2 __attribute__((address(0x3A)));
-[v _RC2 `Vb ~T0 @X0 0 e@58 ]
-"856
-[; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 856: extern volatile unsigned short CCPR1 __attribute__((address(0x015)));
-[v _CCPR1 `Vus ~T0 @X0 0 e@21 ]
-"195 C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "54 E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h
 [; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -190,133 +209,170 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2054
 [; ;E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f74.h: 2054: __asm("PMCON1 equ 018Ch");
 [; <" PMCON1 equ 018Ch ;# ">
+"13 main.c
+[; ;main.c: 13: int counter = 1;
+[v _counter `i ~T0 @X0 1 e ]
+[i _counter
+-> 1 `i
+]
+"14
+[; ;main.c: 14: long Obrot1 = 0;
+[v _Obrot1 `l ~T0 @X0 1 e ]
+[i _Obrot1
+-> -> 0 `i `l
+]
+"15
+[; ;main.c: 15: long Obrot2 = 0;
+[v _Obrot2 `l ~T0 @X0 1 e ]
+[i _Obrot2
+-> -> 0 `i `l
+]
+"16
+[; ;main.c: 16: double roznica = 0;
+[v _roznica `d ~T0 @X0 1 e ]
+[i _roznica
+-> -> 0 `i `d
+]
+"17
+[; ;main.c: 17: double przysp = 0;
+[v _przysp `d ~T0 @X0 1 e ]
+[i _przysp
+-> -> 0 `i `d
+]
+"18
+[; ;main.c: 18: char wynik[9];
+[v _wynik `uc ~T0 @X0 -> 9 `i e ]
 [v $root$_zero `(v ~T0 @X0 0 e ]
-"15 main.c
-[; ;main.c: 15: void __attribute__((picinterrupt(("")))) zero(void){
+"20
+[; ;main.c: 20: void __attribute__((picinterrupt(("")))) zero(void){
 [v _zero `(v ~T1 @X0 1 ef ]
 {
 [e :U _zero ]
 [f ]
-"16
-[; ;main.c: 16:     if(CCP1IF == 1){
-[e $ ! == -> _CCP1IF `i -> 1 `i 90  ]
+"21
+[; ;main.c: 21:     if(CCP1IF == 1 && CCP1IE == 1){
+[e $ ! && == -> _CCP1IF `i -> 1 `i == -> _CCP1IE `i -> 1 `i 90  ]
 {
-"18
-[; ;main.c: 18:         CCP1IF = 0;
+"22
+[; ;main.c: 22:         if(counter == 1)
+[e $ ! == _counter -> 1 `i 91  ]
+"23
+[; ;main.c: 23:             Obrot1 = (long) CCPR1;
+[e = _Obrot1 -> _CCPR1 `l ]
+[e $U 92  ]
+"24
+[; ;main.c: 24:         else if(counter == 2)
+[e :U 91 ]
+[e $ ! == _counter -> 2 `i 93  ]
+"25
+[; ;main.c: 25:             Obrot2 = (long) CCPR1;
+[e = _Obrot2 -> _CCPR1 `l ]
+[e :U 93 ]
+[e :U 92 ]
+"26
+[; ;main.c: 26:         counter++;
+[e ++ _counter -> 1 `i ]
+"27
+[; ;main.c: 27:         if(counter == 3){
+[e $ ! == _counter -> 3 `i 94  ]
+{
+"28
+[; ;main.c: 28:             roznica = (double)Obrot2 - (double)Obrot1;
+[e = _roznica - -> _Obrot2 `d -> _Obrot1 `d ]
+"29
+[; ;main.c: 29:             roznica *= 0.0000002;;
+[e =* _roznica .0.0000002 ]
+"30
+[; ;main.c: 30:             przysp = policz_przyspieszenie(roznica);
+[e = _przysp ( _policz_przyspieszenie (1 _roznica ]
+"31
+[; ;main.c: 31:             konwersja_na_bity(przysp,wynik);
+[e ( _konwersja_na_bity (2 , _przysp &U _wynik ]
+"32
+[; ;main.c: 32:             counter = 1;
+[e = _counter -> 1 `i ]
+"33
+[; ;main.c: 33:             Obrot1 = Obrot2 = 0;
+[e = _Obrot1 = _Obrot2 -> -> 0 `i `l ]
+"34
+[; ;main.c: 34:             roznica = przysp = 0.0;
+[e = _roznica = _przysp .0.0 ]
+"35
+[; ;main.c: 35:         }
+}
+[e :U 94 ]
+"36
+[; ;main.c: 36:         CCP1IF = 0;
 [e = _CCP1IF -> -> 0 `i `b ]
-"19
-[; ;main.c: 19:     }
+"37
+[; ;main.c: 37:     }
 }
 [e :U 90 ]
-"20
-[; ;main.c: 20: }
+"38
+[; ;main.c: 38:     if(TMR1IF == 1 && TMR1IE == 1){
+[e $ ! && == -> _TMR1IF `i -> 1 `i == -> _TMR1IE `i -> 1 `i 95  ]
+{
+"39
+[; ;main.c: 39:         counter = 1;
+[e = _counter -> 1 `i ]
+"40
+[; ;main.c: 40:         Obrot1 = Obrot2 = 0;
+[e = _Obrot1 = _Obrot2 -> -> 0 `i `l ]
+"41
+[; ;main.c: 41:         roznica = przysp = 0.0;
+[e = _roznica = _przysp .0.0 ]
+"42
+[; ;main.c: 42:         TMR1 = 0;
+[e = _TMR1 -> -> 0 `i `us ]
+"43
+[; ;main.c: 43:         TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
+"44
+[; ;main.c: 44:     }
+}
+[e :U 95 ]
+"45
+[; ;main.c: 45: }
 [e :UE 89 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"22
-[; ;main.c: 22: void main(void) {
+"47
+[; ;main.c: 47: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"23
-[; ;main.c: 23:     int counter = 1;
-[v _counter `i ~T0 @X0 1 a ]
-[e = _counter -> 1 `i ]
-"24
-[; ;main.c: 24:     int Obrot1 = 0;
-[v _Obrot1 `i ~T0 @X0 1 a ]
-[e = _Obrot1 -> 0 `i ]
-"25
-[; ;main.c: 25:     int Obrot2 = 0;
-[v _Obrot2 `i ~T0 @X0 1 a ]
-[e = _Obrot2 -> 0 `i ]
-"26
-[; ;main.c: 26:     double roznica = 0;
-[v _roznica `d ~T0 @X0 1 a ]
-[e = _roznica -> -> 0 `i `d ]
-"27
-[; ;main.c: 27:     double przysp = 0;
-[v _przysp `d ~T0 @X0 1 a ]
-[e = _przysp -> -> 0 `i `d ]
-"28
-[; ;main.c: 28:     TRISC = 0b00000100;;
+"48
+[; ;main.c: 48:     TRISC = 0b00000100;;
 [e = _TRISC -> -> 4 `i `uc ]
-"29
-[; ;main.c: 29:     TMR1CS = 0;
-[e = _TMR1CS -> -> 0 `i `b ]
-"30
-[; ;main.c: 30:     TMR1ON = 1;
-[e = _TMR1ON -> -> 1 `i `b ]
-"31
-[; ;main.c: 31:     CCP1CON = 0b00000101;;
+"49
+[; ;main.c: 49:     CCP1CON = 0b00000101;;
 [e = _CCP1CON -> -> 5 `i `uc ]
-"32
-[; ;main.c: 32:     while(1){
-[e :U 93 ]
-{
-"33
-[; ;main.c: 33:         if(RC2 == 1){
-[e $ ! == -> _RC2 `i -> 1 `i 95  ]
-{
-"34
-[; ;main.c: 34:             if(counter == 1)
-[e $ ! == _counter -> 1 `i 96  ]
-"35
-[; ;main.c: 35:                 Obrot1 = (int) CCPR1;
-[e = _Obrot1 -> _CCPR1 `i ]
-[e $U 97  ]
-"36
-[; ;main.c: 36:             else if(counter == 2)
-[e :U 96 ]
-[e $ ! == _counter -> 2 `i 98  ]
-"37
-[; ;main.c: 37:                 Obrot2 = (int) CCPR1;
-[e = _Obrot2 -> _CCPR1 `i ]
+"51
+[; ;main.c: 51:     GIE = 1;
+[e = _GIE -> -> 1 `i `b ]
+"52
+[; ;main.c: 52:     PEIE = 1;
+[e = _PEIE -> -> 1 `i `b ]
+"53
+[; ;main.c: 53:     CCP1IE = 1;
+[e = _CCP1IE -> -> 1 `i `b ]
+"54
+[; ;main.c: 54:     TMR1IE = 1;
+[e = _TMR1IE -> -> 1 `i `b ]
+"56
+[; ;main.c: 56:     TMR1CS = 0;
+[e = _TMR1CS -> -> 0 `i `b ]
+"57
+[; ;main.c: 57:     TMR1ON = 1;
+[e = _TMR1ON -> -> 1 `i `b ]
+"58
+[; ;main.c: 58:     while(1);
 [e :U 98 ]
 [e :U 97 ]
-"38
-[; ;main.c: 38:             counter++;
-[e ++ _counter -> 1 `i ]
-"39
-[; ;main.c: 39:             if(counter == 3){
-[e $ ! == _counter -> 3 `i 99  ]
-{
-"40
-[; ;main.c: 40:                 roznica = (double)Obrot2 - (double)Obrot1;
-[e = _roznica - -> _Obrot2 `d -> _Obrot1 `d ]
-"41
-[; ;main.c: 41:                 roznica *= 0.0000002;;
-[e =* _roznica .0.0000002 ]
-"42
-[; ;main.c: 42:                 przysp = roznica * 2 * 3.14159;;
-[e = _przysp * * _roznica -> -> 2 `i `d .3.14159 ]
-"43
-[; ;main.c: 43:                 printf("%ld",przysp);
-[e ( _printf , (. :s 1C _przysp ]
-"44
-[; ;main.c: 44:                 counter = 1;
-[e = _counter -> 1 `i ]
-"45
-[; ;main.c: 45:                 Obrot1 = Obrot2 = 0 ;
-[e = _Obrot1 = _Obrot2 -> 0 `i ]
-"46
-[; ;main.c: 46:             }
-}
+[e $U 98  ]
 [e :U 99 ]
-"47
-[; ;main.c: 47:         }
+"59
+[; ;main.c: 59: }
+[e :UE 96 ]
 }
-[e :U 95 ]
-"48
-[; ;main.c: 48:     }
-}
-[e :U 92 ]
-[e $U 93  ]
-[e :U 94 ]
-"49
-[; ;main.c: 49: }
-[e :UE 91 ]
-}
-[p f _printf 8388752 ]
-[a 1C 37 108 100 0 ]

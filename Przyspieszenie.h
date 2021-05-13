@@ -14,10 +14,8 @@ extern "C" {
 
 #include <string.h>
 #include <stdio.h>
-
-extern double policz_szybkosc(double R, double t);
-extern double policz_przyspieszenie_katowe(double R, double t);
-extern double policz_przyspieszenie_styczne(double R, double t);
+#define PI 3.14159;    
+extern double policz_przyspieszenie(double t);
 
 extern void wyswietl(char tab[]);
 extern void konwersja_na_bity(double wart, char wynik[]);

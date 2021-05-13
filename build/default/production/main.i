@@ -15,12 +15,9 @@
 
 # 1 "./Przyspieszenie.h" 1
 # 15 "./Przyspieszenie.h"
-extern double policz_szybkosc(double R, double t);
-extern double policz_przyspieszenie_katowe(double R, double t);
-extern double policz_przyspieszenie_styczne(double R, double t);
-# 7 "main.c" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
+
 
 
 
@@ -29,16 +26,50 @@ extern double policz_przyspieszenie_styczne(double R, double t);
 
 
 typedef unsigned size_t;
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
+# 6 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 2 3
 
 # 1 "E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__null.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
+# 7 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 2 3
 
 
 
 
 
 
+
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+# 15 "./Przyspieszenie.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
+# 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdarg.h" 1 3
 
 
@@ -117,7 +148,14 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 8 "main.c" 2
+# 16 "./Przyspieszenie.h" 2
+
+
+extern double policz_przyspieszenie(double t);
+
+extern void wyswietl(char tab[]);
+extern void konwersja_na_bity(double wart, char wynik[]);
+# 7 "main.c" 2
 
 # 1 "E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
@@ -1619,44 +1657,56 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "E:/MPLAB/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
+# 8 "main.c" 2
 
 
 
 
 
+int counter = 1;
+long Obrot1 = 0;
+long Obrot2 = 0;
+double roznica = 0;
+double przysp = 0;
+char wynik[9];
 
 void __attribute__((picinterrupt(("")))) zero(void){
-    if(CCP1IF == 1){
-
+    if(CCP1IF == 1 && CCP1IE == 1){
+        if(counter == 1)
+            Obrot1 = (long) CCPR1;
+        else if(counter == 2)
+            Obrot2 = (long) CCPR1;
+        counter++;
+        if(counter == 3){
+            roznica = (double)Obrot2 - (double)Obrot1;
+            roznica *= 0.0000002;;
+            przysp = policz_przyspieszenie(roznica);
+            konwersja_na_bity(przysp,wynik);
+            counter = 1;
+            Obrot1 = Obrot2 = 0;
+            roznica = przysp = 0.0;
+        }
         CCP1IF = 0;
+    }
+    if(TMR1IF == 1 && TMR1IE == 1){
+        counter = 1;
+        Obrot1 = Obrot2 = 0;
+        roznica = przysp = 0.0;
+        TMR1 = 0;
+        TMR1IF = 0;
     }
 }
 
 void main(void) {
-    int counter = 1;
-    int Obrot1 = 0;
-    int Obrot2 = 0;
-    double roznica = 0;
-    double przysp = 0;
     TRISC = 0b00000100;;
+    CCP1CON = 0b00000101;;
+
+    GIE = 1;
+    PEIE = 1;
+    CCP1IE = 1;
+    TMR1IE = 1;
+
     TMR1CS = 0;
     TMR1ON = 1;
-    CCP1CON = 0b00000101;;
-    while(1){
-        if(RC2 == 1){
-            if(counter == 1)
-                Obrot1 = (int) CCPR1;
-            else if(counter == 2)
-                Obrot2 = (int) CCPR1;
-            counter++;
-            if(counter == 3){
-                roznica = (double)Obrot2 - (double)Obrot1;
-                roznica *= 0.0000002;;
-                przysp = roznica * 2 * 3.14159;;
-                printf("%ld",przysp);
-                return;
-            }
-        }
-    }
+    while(1);
 }

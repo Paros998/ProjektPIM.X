@@ -1,100 +1,133 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"4 Przyspieszenie.c
-[; ;Przyspieszenie.c: 4: static double policz_predkosc_katowa(double t)
-[v _policz_predkosc_katowa `(d ~T0 @X0 1 sf1`d ]
-"5
-[; ;Przyspieszenie.c: 5: {
-{
-[e :U _policz_predkosc_katowa ]
+"195 C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"56 C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\string.h: 56: extern size_t strlen(const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"184 C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdio.h
+[v _puts `(i ~T0 @X0 0 ef1`*Cuc ]
+"3 Przyspieszenie.c
+[; ;Przyspieszenie.c: 3:  double policz_przyspieszenie(double t)
+[v _policz_przyspieszenie `(d ~T0 @X0 1 ef1`d ]
 "4
-[; ;Przyspieszenie.c: 4: static double policz_predkosc_katowa(double t)
-[v _t `d ~T0 @X0 1 r1 ]
-"5
-[; ;Przyspieszenie.c: 5: {
-[f ]
-"6
-[; ;Przyspieszenie.c: 6:     return 2 * 3.14159 / t;
-[e ) / * -> -> 2 `i `d .3.14159 _t ]
-[e $UE 1  ]
-"7
-[; ;Przyspieszenie.c: 7: }
-[e :UE 1 ]
-}
-"9
-[; ;Przyspieszenie.c: 9: double policz_szybkosc(double R, double t)
-[v _policz_szybkosc `(d ~T0 @X0 1 ef2`d`d ]
-"10
-[; ;Przyspieszenie.c: 10: {
+[; ;Przyspieszenie.c: 4: {
 {
-[e :U _policz_szybkosc ]
-"9
-[; ;Przyspieszenie.c: 9: double policz_szybkosc(double R, double t)
-[v _R `d ~T0 @X0 1 r1 ]
-[v _t `d ~T0 @X0 1 r2 ]
-"10
-[; ;Przyspieszenie.c: 10: {
+[e :U _policz_przyspieszenie ]
+"3
+[; ;Przyspieszenie.c: 3:  double policz_przyspieszenie(double t)
+[v _t `d ~T0 @X0 1 r1 ]
+"4
+[; ;Przyspieszenie.c: 4: {
 [f ]
-"11
-[; ;Przyspieszenie.c: 11:     double w = policz_predkosc_katowa(t);
-[v _w `d ~T0 @X0 1 a ]
-[e = _w ( _policz_predkosc_katowa (1 _t ]
-"13
-[; ;Przyspieszenie.c: 13:     return w * R;
-[e ) * _w _R ]
+"5
+[; ;Przyspieszenie.c: 5:     return t * 2 * 3.14159;;
+[e ) * * _t -> -> 2 `i `d .3.14159 ]
 [e $UE 2  ]
-"14
-[; ;Przyspieszenie.c: 14: }
+"6
+[; ;Przyspieszenie.c: 6: }
 [e :UE 2 ]
 }
-"16
-[; ;Przyspieszenie.c: 16: double policz_przyspieszenie_katowe(double R, double t)
-[v _policz_przyspieszenie_katowe `(d ~T0 @X0 1 ef2`d`d ]
-"17
-[; ;Przyspieszenie.c: 17: {
+"8
+[; ;Przyspieszenie.c: 8: void wyswietl(char tab[])
+[v _wyswietl `(v ~T0 @X0 1 ef1`*uc ]
+"9
+[; ;Przyspieszenie.c: 9: {
 {
-[e :U _policz_przyspieszenie_katowe ]
-"16
-[; ;Przyspieszenie.c: 16: double policz_przyspieszenie_katowe(double R, double t)
-[v _R `d ~T0 @X0 1 r1 ]
-[v _t `d ~T0 @X0 1 r2 ]
-"17
-[; ;Przyspieszenie.c: 17: {
+[e :U _wyswietl ]
+"8
+[; ;Przyspieszenie.c: 8: void wyswietl(char tab[])
+[v _tab `*uc ~T0 @X0 1 r1 ]
+"9
+[; ;Przyspieszenie.c: 9: {
 [f ]
-"18
-[; ;Przyspieszenie.c: 18:     double w = policz_predkosc_katowa(t);
-[v _w `d ~T0 @X0 1 a ]
-[e = _w ( _policz_predkosc_katowa (1 _t ]
-"20
-[; ;Przyspieszenie.c: 20:     return w / t;
-[e ) / _w _t ]
-[e $UE 3  ]
-"21
-[; ;Przyspieszenie.c: 21: }
+"10
+[; ;Przyspieszenie.c: 10:     for(int i = 0; i < strlen(tab); i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 7  ]
+[e :U 4 ]
+"11
+[; ;Przyspieszenie.c: 11:         printf("%c", tab[i]);
+[e ( _printf , (. :s 1C -> *U + _tab * -> _i `x -> -> # *U _tab `i `x `i ]
+[e ++ _i -> 1 `i ]
+[e :U 7 ]
+[e $ < -> _i `ui ( _strlen (1 -> _tab `*Cuc 4  ]
+[e :U 5 ]
+}
+"12
+[; ;Przyspieszenie.c: 12:     puts("");
+[e ( _puts (1 :s 2C ]
+"13
+[; ;Przyspieszenie.c: 13: }
 [e :UE 3 ]
 }
-"23
-[; ;Przyspieszenie.c: 23: double policz_przyspieszenie_styczne(double R, double t)
-[v _policz_przyspieszenie_styczne `(d ~T0 @X0 1 ef2`d`d ]
-"24
-[; ;Przyspieszenie.c: 24: {
+"15
+[; ;Przyspieszenie.c: 15: void konwersja_na_bity(double wart, char wynik[])
+[v _konwersja_na_bity `(v ~T0 @X0 1 ef2`d`*uc ]
+"16
+[; ;Przyspieszenie.c: 16: {
 {
-[e :U _policz_przyspieszenie_styczne ]
-"23
-[; ;Przyspieszenie.c: 23: double policz_przyspieszenie_styczne(double R, double t)
-[v _R `d ~T0 @X0 1 r1 ]
-[v _t `d ~T0 @X0 1 r2 ]
-"24
-[; ;Przyspieszenie.c: 24: {
+[e :U _konwersja_na_bity ]
+"15
+[; ;Przyspieszenie.c: 15: void konwersja_na_bity(double wart, char wynik[])
+[v _wart `d ~T0 @X0 1 r1 ]
+[v _wynik `*uc ~T0 @X0 1 r2 ]
+"16
+[; ;Przyspieszenie.c: 16: {
 [f ]
+"17
+[; ;Przyspieszenie.c: 17:     int cz_calk = (int)wart;
+[v _cz_calk `i ~T0 @X0 1 a ]
+[e = _cz_calk -> _wart `i ]
+"18
+[; ;Przyspieszenie.c: 18:     double cz_ulamk = wart - cz_calk;
+[v _cz_ulamk `d ~T0 @X0 1 a ]
+[e = _cz_ulamk - _wart -> _cz_calk `d ]
+"19
+[; ;Przyspieszenie.c: 19:     double n = wart;
+[v _n `d ~T0 @X0 1 a ]
+[e = _n _wart ]
+"21
+[; ;Przyspieszenie.c: 21:     wynik[0] = (char)(cz_calk + '0');
+[e = *U + _wynik * -> -> 0 `i `x -> -> # *U _wynik `i `x -> + -> _cz_calk `ui -> 48 `ui `uc ]
+"22
+[; ;Przyspieszenie.c: 22:     wynik[1] = '.';
+[e = *U + _wynik * -> -> 1 `i `x -> -> # *U _wynik `i `x -> -> 46 `ui `uc ]
+"24
+[; ;Przyspieszenie.c: 24:     for(int i = 2; i < 9; i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 2 `i ]
+[e $ < _i -> 9 `i 9  ]
+[e $U 10  ]
+[e :U 9 ]
 "25
-[; ;Przyspieszenie.c: 25:     double E = policz_przyspieszenie_katowe(R, t);
-[v _E `d ~T0 @X0 1 a ]
-[e = _E ( _policz_przyspieszenie_katowe (2 , _R _t ]
+[; ;Przyspieszenie.c: 25:     {
+{
+"26
+[; ;Przyspieszenie.c: 26:         n = cz_ulamk * 2;
+[e = _n * _cz_ulamk -> -> 2 `i `d ]
 "27
-[; ;Przyspieszenie.c: 27:     return E * R;
-[e ) * _E _R ]
-[e $UE 4  ]
+[; ;Przyspieszenie.c: 27:         cz_calk = (int)n;
+[e = _cz_calk -> _n `i ]
 "28
-[; ;Przyspieszenie.c: 28: }
-[e :UE 4 ]
+[; ;Przyspieszenie.c: 28:         cz_ulamk = n - cz_calk;
+[e = _cz_ulamk - _n -> _cz_calk `d ]
+"29
+[; ;Przyspieszenie.c: 29:         wynik[i] = cz_calk > 0 ? '1' : '0';
+[e = *U + _wynik * -> _i `x -> -> # *U _wynik `i `x -> ? > _cz_calk -> 0 `i : -> 49 `ui -> 48 `ui `uc ]
+"30
+[; ;Przyspieszenie.c: 30:     }
 }
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 9 `i 9  ]
+[e :U 10 ]
+}
+"31
+[; ;Przyspieszenie.c: 31: }
+[e :UE 8 ]
+}
+[p f _printf 8912896 ]
+[a 1C 37 99 0 ]
+[a 2C 0 ]
